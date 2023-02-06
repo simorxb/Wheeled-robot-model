@@ -29,23 +29,23 @@ We call omega1 and omega2 the angular speed (in rad/s) of wheel 1 and wheel 2. W
 
 Then we have:
 
-✅ u1 = omega1*r
+✅ u1 = omega1\*r
 
-✅ u2 = omega2*r
+✅ u2 = omega2\*r
 
 Now let u and v be the linear speed of the robot (the centre of mass) along xr and yr. Assuming the robot is a rigid body if wheel 1 moves at u1 and wheel 2 moves at u2 along xr, then u = (u1 + u2)/2 and v is always 0:
 
-✅ u = omega1*r/2 + omega2*r/2
+✅ u = omega1\*r/2 + omega2\*r/2
 
 ✅ v = 0
 
 Finally, we can write the equation of motion, where the state variables are [x, y, psi]:
 
-✅ dx/dt = u*cos(psi)
+✅ dx/dt = u\*cos(psi)
 
-✅ dy/dt = u*sin(psi)
+✅ dy/dt = u\*sin(psi)
 
-✅ dpsi/dt = omega2*r/d - omega1*r/d
+✅ dpsi/dt = omega2\*r/d - omega1\*r/d
 
 Being a kinematic system model we can assume that each wheel's speed controllers are ideal and our system's input commands are omega1 and omega2.
 
