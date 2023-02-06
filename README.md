@@ -30,17 +30,21 @@ We call omega1 and omega2 the angular speed (in rad/s) of wheel 1 and wheel 2. W
 Then we have:
 
 ✅ u1 = omega1*r
+
 ✅ u2 = omega2*r
 
 Now let u and v be the linear speed of the robot (the centre of mass) along xr and yr. Assuming the robot is a rigid body if wheel 1 moves at u1 and wheel 2 moves at u2 along xr, then u = (u1 + u2)/2 and v is always 0:
 
 ✅ u = omega1*r/2 + omega2*r/2
+
 ✅ v = 0
 
 Finally, we can write the equation of motion, where the state variables are [x, y, psi]:
 
 ✅ dx/dt = u*cos(psi)
+
 ✅ dy/dt = u*sin(psi)
+
 ✅ dpsi/dt = omega2*r/d - omega1*r/d
 
 Being a kinematic system model we can assume that each wheel's speed controllers are ideal and our system's input commands are omega1 and omega2.
@@ -50,14 +54,19 @@ In the slides below you can see the implementation in Xcos and the result of the
 To test the model I provided omega1 and omega 2 in open loop as follows:
 
 ✅ Accelerate both wheels to 3 rad/s in the first 20 seconds
+
 ✅ Accelerate wheel 2 to 3.5 rad/s from second 20 to 30, whilst keeping wheel 1 constant, to start turning left
+
 ✅ From second 60 to 70 accelerate wheel 1 to 3.5 rad/s to go straight
+
 ✅ From second 90 to 120 decelerate wheel 2 to 3 rad/s, to start turning right
 
 This system is super interesting and I plan to use it in the future for a few things:
 
 ✅ Controlling speed and yaw using PIDs
+
 ✅ Trajectory following
+
 ✅ Advanced control techniques like MPC
 
 The link to the code in Scilab is in the first comment.
