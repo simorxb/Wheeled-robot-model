@@ -3,7 +3,7 @@ Kinematic model of a two-wheeled robot
 
 Code created to support a Linkedin post. Follow me on Linkedin! https://www.linkedin.com/in/simone-bertoni-control-eng/
 
-Original post:
+Original post: https://www.linkedin.com/posts/simone-bertoni-control-eng_wheeled-robot-kinematic-model-activity-7028271068167426048-nsJd?utm_source=share&utm_medium=member_desktop
 
 Don't know where to start with mobile robots?
 
